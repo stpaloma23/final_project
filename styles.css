@@ -1,0 +1,330 @@
+/*I chose to have 1 css style sheet because all of my pages have the same layout*/
+
+body{
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+p{
+
+
+}
+h1{
+  color:black;
+}
+/*removing the default margins in the fonts*/
+h1, h2, h3, p{
+  display: block;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.main_container{
+  margin-left: 0vw;
+  margin-right: 0vw;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+}
+.youtube_page{ /*full page*/
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/*the top part of the page*/
+.top_bar{
+  padding-left: 20px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  height: 60px;
+  align-items: center;
+  width: inherit;
+}
+.logo{
+  height: 35px;
+  width: 120px;
+}
+input{
+  padding: 9px;
+  border: 1px solid #f3f3f3;
+  margin-top: 8px;
+  margin-right: 20px;
+  font-size: 17px;
+  min-width: 50vw;
+  margin:0px;
+}
+.search_bar{
+  display: flex;
+  align-items: center;
+}
+.search_icon{
+  height: 40px;
+  width: 65px;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #d3d3d3;
+}
+.fas fa-search{
+  color:#969696;
+}
+.fas{
+  color:#969696;
+
+}
+
+/*to right icons*/
+.icons{
+  display: flex;
+  height:40px;
+  margin-right: 3vw;
+  align-items: center;
+}
+.icons img{
+  border-radius: 50%;
+  height: 30px;
+  width:30px;
+  margin-right: 15px;
+}
+.fa-video,.fa-th,.fa-bell{
+  font-size: x-large;
+  margin-right: 15px;
+}
+
+/*the rest of the page*/
+.youtube_contents{
+  display: flex;
+  background-color: #f9f9f9;
+
+}
+
+.left_side{
+  width: 62vw;
+  margin-left: 5vw;
+}
+/*/slide show navigation*/
+#prevButton{
+  z-index: 10;
+  left: 1%;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+
+
+}
+#nextButton{
+  z-index: 10;
+  right: 1%;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+
+}
+/*the "video"*/
+.header{
+  background-color: orange;
+  width: 60vw;
+  margin:auto;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color:white;
+  overflow: hidden;
+}
+/*slideshow*/
+.carouselContainer{
+  width: inherit;
+  height: inherit;
+}
+.carouselContainer img{
+  width: inherit;
+  height: inherit;
+}
+
+/*the video title and stuff*/
+.main_title{
+  font-size: 22px;
+}
+
+.video_icons{
+  display: flex;
+  justify-content: space-between;
+
+}
+.left_contents{
+  display: flex;
+  align-items: center;
+}
+.right_contents{
+  display: flex;
+}
+
+.vid_description{
+  display: flex;
+  justify-content: space-between;
+}
+.action_option{
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+
+}
+.action_option p{
+  padding-left: 10px;
+}
+.right_icons{
+  display: flex;
+  color: #909090;
+}
+.views_date{
+  display: flex;
+  color:#909090;
+}
+.subscribe_button{
+  padding: 10px;
+  background-color: red;
+  color:white;
+  margin: 10px;
+}
+.profile_pic img{
+  border-radius: 50%;
+  height: 60px;
+  width:60px;
+}
+.profile_pic{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.subscribe_button h3{
+  display: block;
+
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+/*end of working on the left side*/
+
+/*the right side, done using json collections*/
+.right_side{
+  display: flex;
+  width: 38vw;
+  padding-left: 20px;
+  flex-direction: column;
+  margin-right: 7vw;
+}
+#rightSideJSON{
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  /*grid-column-gap: 20px;*/
+}
+/*the circles at top of right side of page*/
+.all_circle, .effects_circle{
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 13px;
+
+}
+.all_circle h3, .effects_circle h3{
+  display: block;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+.all_circle{
+  border: 1px solid black;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.effects_circle{
+  background-color: grey;
+  color:white;
+}
+.top_options{
+  display: flex;
+}
+/*styling the json collection*/
+.theThumbnail{
+  height: 120px;
+  width:220px;
+  margin-right: 10px;
+}
+.theThumbnail img{
+  height: inherit;
+  width: inherit;
+
+}
+.nextVid{
+  display: flex;
+  align-items:flex-start;
+  margin-bottom: 15px;
+}
+.nextVid a {
+  font-weight: bold;
+
+}
+.nextVid p{
+  font-size: 16px;
+  opacity: 75%;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: red;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .youtube_contents{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .youtube_page{ /*full page*/
+    height: 100%;
+    width: 100vw;
+    overflow:scroll;
+  }
+  .left_side, .right_side{
+    width: 100%;
+  }
+  .header{
+    background-color: orange;
+    width: 100%;
+    margin:auto;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:white;
+    overflow: hidden;
+  }
+}
